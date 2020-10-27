@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<?php
+<div class="container">
+    <div class="head"></div>
+    <div class="left">
+    <?php
     $conn = new mysqli("localhost","root","","zadania");
 
     $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
@@ -32,6 +36,10 @@
     <input type="text" name="name">
     <input type="submit" value="delet">
 </form>
+</div>
+    <div class="right"></div>
+    
+</div>
     
 </body>
 </html>
