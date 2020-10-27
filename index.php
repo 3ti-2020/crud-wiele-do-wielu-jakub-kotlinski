@@ -32,12 +32,14 @@
 
     echo("</table>");
 ?>
-<form action="insert_autorzy.php" method="POST">
-    <input type="text" name="name">
-    <input type="submit" value="delet">
-</form>
+
 </div>
-    <div class="right"></div>
+    <div class="right">
+        <form action="insert_autorzy.php" method="POST">
+            <input type="text" name="name">
+            <input type="submit" value="delet">
+        </form>
+    </div>
     
 </div>
     

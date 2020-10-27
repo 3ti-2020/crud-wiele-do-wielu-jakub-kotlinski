@@ -18,10 +18,16 @@
 {
     grid-area: b;
     background: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right
 {
     background: lightgreen;
     grid-area: c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
