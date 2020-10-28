@@ -12,6 +12,9 @@
 {
     background: lightblue;
     grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .left
