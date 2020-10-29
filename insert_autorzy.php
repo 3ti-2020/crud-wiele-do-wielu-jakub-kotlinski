@@ -1,15 +1,19 @@
 <?php 
 
+//$conn = new mysqli("localhost","root","","zadania");
 $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
 $imie = $_POST["name"];
 $tytul = $_POST["tytul"];
 
-$conn->query("DELETE FROM `lib_autor` WHERE `name` LIKE '".$imie."';");
+$conn->query("INSERT INTO `lib_autor`(`id`, `name`) VALUES (NULL,'".$imie."');");
 
-//$conn->query("insert into `pracownicy` (`id_pracownicy`,`imie`,`dzial`,`zarobki`,`data_urodzenia`) values (NULL,'".$imie."','".$dzial."','".$zarobki."','".$data_urodzenia."');");
+$conn->query("INSERT INTO `lib_autor`(`id`, `tytul`) VALUES (NULL,'".$tytul."');");
 
-header('Location: /php/autorzy.php');
+
+//header('Location: /php/cos/index.php');
+header('Location: https://jakub-kotlinski.herokuapp.com/');
 
 $conn->close(); 
+
 
 ?>

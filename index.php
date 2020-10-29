@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jakub Kotlinski</title>
+    <title>Jakub Kotlinski gr2</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
     </div>
     <div class="left">
     <?php
+    //$conn = new mysqli("localhost","root","","zadania");
     $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
 
     $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
@@ -38,8 +39,9 @@
 </div>
     <div class="right">
         <form action="insert_autorzy.php" method="POST">
-            <input type="text" name="name">
-            <input type="submit" value="delet">
+            <input type="text" name="name">Nazwisko
+            <input type="text" name="tytul">Tytul <br>
+            <input type="submit" value="wyslij">
         </form>
     </div>
     
