@@ -13,8 +13,8 @@
     </div>
     <div class="left">
     <?php
-    $conn = new mysqli("localhost","root","","zadania");
-    //$conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
+    //$conn = new mysqli("localhost","root","","zadania");
+    $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
 
     $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
 

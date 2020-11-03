@@ -10,7 +10,7 @@
 
 .head
 {
-    background: rgb(94, 99, 100);
+    background: lightseagreen;
     grid-area: a;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@
 .left
 {
     grid-area: b;
-    background: rgb(117, 117, 117);
+    background: lightcoral;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
 
 .right
 {
-    background: rgb(126, 126, 126);
+    background: lightgreen;
     grid-area: c;
     display: flex;
     justify-content: center;
