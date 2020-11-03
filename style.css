@@ -1,3 +1,10 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+
 .container
 {
     display: grid;
@@ -10,17 +17,18 @@
 
 .head
 {
-    background: lightseagreen;
+    background: rgb(70, 70, 70);
     grid-area: a;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .left
 {
     grid-area: b;
-    background: lightcoral;
+    background: rgb(119, 119, 119);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,9 +36,27 @@
 
 .right
 {
-    background: lightgreen;
+    background: rgb(185, 185, 185);
     grid-area: c;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.link
+{
+    padding: 20px;
+    background: whitesmoke;
+    margin: 10px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover
+{
+    background: rgb(218, 218, 218);
 }
