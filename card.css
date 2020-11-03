@@ -71,7 +71,7 @@ a
 
 .back
 {
-  background-image: url("1.jpg");
+  background-image: url("img/1.jpg");
   height:6em;
   width:16em;
   position:Absolute;
@@ -138,7 +138,7 @@ a
 
 .back2
 {
-  background-image: url("3.jpg");
+  background-image: url("img/3.jpg");
   height:6em;
   width:16em;
   position:Absolute;
@@ -186,7 +186,7 @@ a
     width: 20px;
     width:1em;
     height:1em;
-    background: url("5.jpg");
+    background: url("img/5.jpg");
     background-position: center;
     background-size: cover;
     position:absolute;
@@ -198,28 +198,14 @@ a
 
 .card:hover .link
 {
-    background: url("4.png");
-    background-position: center;
-    background-size: cover;
-}
-
-.card1:hover .link
-{
-    background: url("4.png");
+    background: url("img/4.png");
     background-position: center;
     background-size: cover;
 }
 
 .card2:hover .link
 {
-    background: url("4.png");
-    background-position: center;
-    background-size: cover;
-}
-
-.card3:hover .link
-{
-    background: url("4.png");
+    background: url("img/4.png");
     background-position: center;
     background-size: cover;
 }
@@ -253,7 +239,7 @@ a
     width: 20px;
     width:1em;
     height:1em;
-    background: url("6.png");
+    background: url("img/6.png");
     background-position: center;
     background-size: cover;
     position:absolute;
@@ -265,30 +251,18 @@ a
 
 .card:hover .icon
 {
-    background: url("5.png");
-    background-position: center;
-    background-size: cover;
-}
-
-.card1:hover .icon
-{
-    background: url("5.png");
+    background: url("img/5.png");
     background-position: center;
     background-size: cover;
 }
 
 .card2:hover .icon
 {
-    background: url("5.png");
+    background: url("img/5.png");
     background-position: center;
     background-size: cover;
 }
 
-.card3:hover .icon
-{
-    background: url("5.png");
-    background-position: center;
-    background-size: cover;
-}
+
 
 

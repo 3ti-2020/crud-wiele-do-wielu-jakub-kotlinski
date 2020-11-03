@@ -10,8 +10,12 @@
 <div class="container">
     <div class="head">
         <h1>Jakub Kotliński</h1>
+        <div class="linki">
         <a href="index.html"><div class="link">Karty</div></a>
         <a href=""><div class="link">Logowanie</div></a>
+        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="link">GitHub</div></a>
+        </div>
+        
     </div>
     <div class="left">
     <?php
@@ -41,7 +45,7 @@
 </div>
     <div class="right">
         <form action="insert_autorzy.php" method="POST">
-            <input type="text" name="name">Nazwisko
+            <input type="text" name="name">Nazwisko <br>
             <input type="text" name="tytul">Tytul <br>
             <input type="submit" value="wyslij">
         </form>
