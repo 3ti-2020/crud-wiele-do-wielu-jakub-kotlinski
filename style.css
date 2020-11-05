@@ -22,9 +22,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.a
+{
+    width: 33%;
+    height: 33vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.b
+{
+    width: 33%;
+    height: 26vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 
+.c
+{
+    width: 33%;
+    height: 28vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
 .left
 {
     grid-area: b;
@@ -66,5 +94,74 @@ a
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
+}
+
+.git
+{
+    background: url("img/7.png");
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+}
+
+.zmiana_koloru{
+    padding: 10px;
+    border: solid 3px silver;
+    border-radius: 8px;
+    color: silver;
+    background: rgba(0,0,0,0.6);
+    font-size: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    outline: none;
+}
+
+.zmiana_koloru:hover{
+    background: rgb(102, 102, 102);
+}
+
+.zmiana_koloru_1{
+    padding: 10px;
+    border: solid 3px white;
+    border-radius: 8px;
+    color: white;
+    background: lightskyblue;
+    font-size: 10px;
+    text-transform: capitalize;
+    cursor: pointer;
+    outline: none;
+}
+
+.zmiana_koloru_1:hover{
+    background: cornflowerblue;
+}
+
+.head_1
+{
+    background: lightblue;
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.left_1
+{
+    grid-area: b;
+    background: rgb(16, 160, 226);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_1
+{
+    background: rgb(1, 65, 202);
+    grid-area: c;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }

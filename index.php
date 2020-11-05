@@ -9,12 +9,22 @@
 <body>
 <div class="container">
     <div class="head">
-        <h1>Jakub Kotliński</h1>
-        <div class="linki">
-        <a href="index.html"><div class="link">Karty</div></a>
-        <a href=""><div class="link">Logowanie</div></a>
-        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="link">GitHub</div></a>
+        <div class="a">
+        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="git"></div></a>
         </div>
+        <div class="b">
+            <h1>Jakub Kotliński</h1>
+            <div class="linki">
+                <a href="index.html"><div class="link">Karty</div></a>
+                <a href=""><div class="link">Logowanie</div></a>
+            </div>
+        </div>
+        <div class="c">
+            <button class="zmiana_koloru" type="button" >Tryb Noir</button>
+            <button class="zmiana_koloru_1" type="button" >Tryb Blue</button>
+        </div>
+        
+       
         
     </div>
     <div class="left">
@@ -54,4 +64,5 @@
 </div>
     
 </body>
+<script src="script.js"></script>
 </html>
