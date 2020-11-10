@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,18 +20,24 @@
             <h1>Jakub Kotliński</h1>
             <div class="linki">
                 <a href="index.html"><div class="link">Karty</div></a>
-                <a href=""><div class="link">Logowanie</div></a>
+                <a href="logout.php"><div class="link">Wyloguj</div></a>
             </div>
         </div>
         <div class="c">
             <button class="zmiana_koloru" type="button" >Tryb Noir</button>
             <button class="zmiana_koloru_1" type="button" >Tryb Blue</button>
+            <?php
+
+            echo(isset($_SESSION['login']) ? "zalogowano" : "niezalogowano");
+
+            ?>
         </div>
         
        
         
     </div>
     <div class="left">
+    
     <?php
     //$conn = new mysqli("localhost","root","","zadania");
     $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
@@ -55,10 +65,18 @@
 </div>
     <div class="right">
         <form action="insert_autorzy.php" method="POST">
-            <input type="text" name="name">Nazwisko <br>
-            <input type="text" name="tytul">Tytul <br>
+            <input type="text" name="name" placeholder="Nazwisko"><br>
+            <input type="text" name="tytul" placeholder="Tytuł"><br>
             <input type="submit" value="wyslij">
         </form>
+        <form class="login" action="logowanie.php" method="POST">
+        
+            <input type="text" name="login" placeholder="Login..." required><br>
+            <input type="password" name="password" placeholder="Hasło..." required><br>
+            <input type="submit" value="Zaloguj"><br>
+            <span class="password">admin 1234</span>
+    
+    </form>
     </div>
     
 </div>
