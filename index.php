@@ -63,7 +63,7 @@
 
     echo("</table>");
     echo("</div>");
-
+/*
     $sql1 = "SELECT wypozyczenia.id, lib_autor.name, lib_tytul.tytul FROM `wypozyczenia`, lib_tytul, lib_autor WHERE lib_tytul.id_tytul=wypozyczenia.id_tytul AND lib_autor.id=wypozyczenia.id_autor";
 
     $result = $conn->query( $sql1 );
@@ -86,7 +86,7 @@
     }
 
     echo("</table>");
-    echo("</div>");
+    echo("</div>");*/
 ?>
 
 
