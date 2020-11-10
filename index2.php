@@ -43,7 +43,7 @@
     $conn = new mysqli("localhost","root","","zadania");
     //$conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
 
-    $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
+    $sql = "SELECT `name`, tytul, id_autor_tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
 
     $result = $conn->query( $sql );
     echo("<div>");
@@ -58,7 +58,14 @@
     {
         echo("<tr>
         <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>");
+        <td>".$row['tytul']."</td>
+        <td>
+            <form action='delet.php' method='post'>
+            <input type='hidden' value='".$row['id_autor_tytul']."' name='id_del'>
+            <input type='submit' value='Delet'>
+            </form>
+        </td>
+        </tr>");
     }
 
     echo("</table>");
@@ -92,6 +99,11 @@
 
 </div>
     <div class="right">
+        <form action="insert_autorzy.php" method="POST">
+            <input type="text" name="name" placeholder="Nazwisko"><br>
+            <input type="text" name="tytul" placeholder="Tytuł"><br>
+            <input type="submit" value="wyslij">
+        </form>
         <form class="login" action="logowanie.php" method="POST">
         
             <input type="text" name="login" placeholder="Login..." required><br>

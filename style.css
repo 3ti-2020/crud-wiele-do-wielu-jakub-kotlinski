@@ -60,6 +60,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .right
@@ -68,6 +70,7 @@
     grid-area: c;
     display: flex;
     justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -155,6 +158,8 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .right_1
@@ -163,5 +168,6 @@ a
     grid-area: c;
     display: flex;
     justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
