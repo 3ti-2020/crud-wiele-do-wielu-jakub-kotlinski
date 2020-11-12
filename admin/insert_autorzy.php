@@ -1,7 +1,8 @@
 <?php 
 
 //$conn = new mysqli("localhost","root","","zadania");
-$conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
+$conn = new mysqli("remotemysql.com","jfFxpXyGWk","Dly0LzRmEd","jfFxpXyGWk");
+
 
 $sqlGetId = "SELECT LAST_INSERT_ID()";
 
@@ -25,6 +26,6 @@ mysqli_query($conn, $sql);
 
 $conn->close(); 
 //header('Location: /admin/index2.php');
-header('Location: https://jakub-kotlinski.herokuapp.com/admin/index2.php');
+header('Location: https:jakub-kotlinski.herokuapp.com/admin/index2.php');
 
 ?>

@@ -15,7 +15,7 @@
 <div class="container">
     <div class="head">
         <div class="a">
-        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="git"></div></a>
+        <a href="https:github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="git"></div></a>
         </div>
         <div class="b">
             <h1>Jakub Kotliński</h1>
@@ -29,7 +29,7 @@
             <button class="zmiana_koloru_1" type="button" >Tryb Blue</button>
             <?php
 
-            echo(isset($_SESSION['login']) ? "zalogowano" : "niezalogowano");
+                echo(isset($_SESSION['login']) ? "zalogowano" : "niezalogowano");
 
             ?>
         </div>
@@ -41,7 +41,8 @@
     
     <?php
     //$conn = new mysqli("localhost","root","","zadania");
-    $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
+    $conn = new mysqli("remotemysql.com","jfFxpXyGWk","Dly0LzRmEd","jfFxpXyGWk");
+
 
     $sql = "SELECT `name`, tytul, id_autor_tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
 
@@ -109,7 +110,7 @@
             <input type="text" name="login" placeholder="Login..." required><br>
             <input type="password" name="password" placeholder="Hasło..." required><br>
             <input type="submit" value="Zaloguj"><br>
-            <span class="password">admin 1234</span>
+            <span class="password">admin a</span>
     
     </form>
     </div>

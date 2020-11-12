@@ -2,11 +2,12 @@
 
     session_start();
     //$conn = new mysqli("localhost","root","","zadania");
-    $conn = new mysqli("sql7.freemysqlhosting.net","sql7373143","ky7DfUhHKN","sql7373143");
+    $conn = new mysqli("remotemysql.com","jfFxpXyGWk","Dly0LzRmEd","jfFxpXyGWk");
+
 
     unset($_SESSION['login']);
 
     //header('Location: /index.php');
-    header('Location: https://jakub-kotlinski.herokuapp.com/');
+    header('Location: https:jakub-kotlinski.herokuapp.com/');
 
 ?>
