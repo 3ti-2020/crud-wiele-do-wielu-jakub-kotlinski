@@ -51,8 +51,9 @@
     echo("<h2>Biblioteka</h2>");
     echo("<table border=1>");
     echo("<tr>
-    <td>name</td>
-    <td>tytul</td>
+    <td>Autor</td>
+    <td>Tytul</td>
+    <td>Usuń</td>
     </tr>");
 
     while( $row = $result->fetch_assoc())
@@ -71,47 +72,79 @@
 
     echo("</table>");
     echo("</div>");
-/*
-    $sql1 = "SELECT wypozyczenia.id, lib_autor.name, lib_tytul.tytul FROM `wypozyczenia`, lib_tytul, lib_autor WHERE lib_tytul.id_tytul=wypozyczenia.id_tytul AND lib_autor.id=wypozyczenia.id_autor";
+
+    $sql1 = "SELECT wypozyczenia.id_wypozyczenia, lib_autor.name, lib_tytul.tytul, users.username AS 'user' FROM wypozyczenia, lib_tytul,lib_autor_tytul,lib_autor, users WHERE lib_autor.id=lib_autor_tytul.id_autor AND lib_tytul.id_tytul=lib_autor_tytul.id_tytul AND lib_autor_tytul.id_autor_tytul=wypozyczenia.ksiazka AND users.id=wypozyczenia.user";
 
     $result = $conn->query( $sql1 );
-    echo("<div>");
-    echo("<h2>Wypożyczenia</h2>");
-    echo("<table border=1>");
-    echo("<tr>
-    <td>Id</td>
-    <td>name</td>
-    <td>tytul</td>
-    </tr>");
 
+    echo("<div>");
+    echo("<table border=1>");
+    echo("<h2>WYPOŻYCZENIA</h2>");
+    echo("<tr>
+        <td>Autor</td>
+        <td>Tytul</td>
+        <td>Użytkownik</td>
+        <td>Oddaj</td>
+    </tr>");
     while( $row = $result->fetch_assoc())
     {
-        echo("<tr>
-        <td>".$row['id']."</td>
-        <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>
-        ");
+        echo("<tr>");
+        echo("<td>".$row['name']."</td><td>".$row['tytul']."</td><td>".$row['user']."</td>
+        
+        
+            <td>
+                <form action='/admin/delet_wyp.php' method='POST'>
+                <input type='hidden' name='oddaj' value='".$row['id_wypozyczenia']."'>
+                <input type='submit' value='oddaj'>
+                </form>
+            </td>"
+        
+        );
+        echo("</tr>");
     }
-
     echo("</table>");
-    echo("</div>");*/
+    echo("</div>");
 ?>
 
 
 </div>
     <div class="right">
+        <div><h2>Admin Panel</h2></div>
         <form action="/admin/insert_autorzy.php" method="POST">
+            <h3>Dodaj Książke</h3>
             <input type="text" name="name" placeholder="Nazwisko"><br>
             <input type="text" name="tytul" placeholder="Tytuł"><br>
             <input type="submit" value="wyslij">
         </form>
-        <form class="login" action="/log/logowanie.php" method="POST">
+
         
-            <input type="text" name="login" placeholder="Login..." required><br>
-            <input type="password" name="password" placeholder="Hasło..." required><br>
-            <input type="submit" value="Zaloguj"><br>
-            <span class="password">admin a</span>
-    
+        <form action="/log/dodaj_user.php" method="POST">
+            <h3>Dodaj Użytkownika</h3>
+            <input type="text" name="oddaj"  placeholder="User"><br>
+            <input type="submit" value="Dodaj">
+        </form>
+
+        <form action="/log/wyp.php" method="POST">
+        <h3>Wypożycz książke</h3>
+        <p>wybierz książkę:</p>
+        <?php
+            $result3 = $conn->query("SELECT id_autor_tytul , `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_tytul.id_tytul = lib_autor_tytul.id_tytul AND lib_autor.id=lib_autor_tytul.id_autor");
+            echo("<select name='tytul'>");
+            while($wiersz3 = $result3->fetch_assoc()){
+                echo("<option value='".$wiersz3['id_autor_tytul']."' name='tytul'>".$wiersz3['name'].":  ".$wiersz3['tytul']."</option>");
+            }
+            echo("</select>");
+        ?>
+        <p>wybierz uzytkownika:</p> 
+        <?php
+            $result4 = $conn->query("SELECT id, username FROM users");
+            echo("<select name='user'>");
+            while($wiersz4 = $result4->fetch_assoc()){
+                echo("<option value='".$wiersz4['id']."' name='user'>".$wiersz4['username']."</option>");
+            }
+            echo("</select>");
+        ?>
+        <input type="submit" value="WYPOŻYCZ">
     </form>
     </div>
     

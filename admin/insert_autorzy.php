@@ -25,7 +25,6 @@ $sql=" INSERT INTO lib_autor_tytul (id_autor_tytul, id_autor,id_tytul) values (N
 mysqli_query($conn, $sql);
 
 $conn->close(); 
-//header('Location: /admin/index2.php');
 header('Location: /admin/index2.php');
 
 ?>

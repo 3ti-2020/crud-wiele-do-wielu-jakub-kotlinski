@@ -62,30 +62,6 @@
 
     echo("</table>");
     echo("</div>");
-/*
-    $sql1 = "SELECT wypozyczenia.id, lib_autor.name, lib_tytul.tytul FROM `wypozyczenia`, lib_tytul, lib_autor WHERE lib_tytul.id_tytul=wypozyczenia.id_tytul AND lib_autor.id=wypozyczenia.id_autor";
-
-    $result = $conn->query( $sql1 );
-    echo("<div>");
-    echo("<h2>Wypożyczenia</h2>");
-    echo("<table border=1>");
-    echo("<tr>
-    <td>Id</td>
-    <td>name</td>
-    <td>tytul</td>
-    </tr>");
-
-    while( $row = $result->fetch_assoc())
-    {
-        echo("<tr>
-        <td>".$row['id']."</td>
-        <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>
-        ");
-    }
-
-    echo("</table>");
-    echo("</div>");*/
 ?>
 
 
@@ -99,6 +75,7 @@
             <span class="password">admin a</span>
     
     </form>
+
     </div>
     
 </div>
