@@ -9,5 +9,5 @@
     mysqli_query($conn, $sql);
 
     //header('Location: /admin/index2.php');
-    header('Location: https:jakub-kotlinski.herokuapp.com/admin/index2.php');
+    header('Location: /admin/index2.php');
 ?>
