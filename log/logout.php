@@ -8,6 +8,6 @@
     unset($_SESSION['login']);
 
     //header('Location: /index.php');
-    header('Location: https:jakub-kotlinski.herokuapp.com/');
+    header('Location: /index.php');
 
 ?>
