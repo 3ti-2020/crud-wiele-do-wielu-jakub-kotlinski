@@ -15,7 +15,7 @@
 <div class="container">
     <div class="head">
         <div class="a">
-        <a href="https:github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="git"></div></a>
+        <a href="https://github.com/3ti-2020/crud-wiele-do-wielu-jakub-kotlinski"><div class="git"></div></a>
         </div>
         <div class="b">
             <h1>Jakub Kotliński</h1>
