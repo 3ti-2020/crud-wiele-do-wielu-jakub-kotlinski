@@ -61,7 +61,7 @@
         <td>".$row['name']."</td>
         <td>".$row['tytul']."</td>
         <td>
-            <form action='delet.php' method='post'>
+            <form action='delet_autor.php' method='post'>
             <input type='hidden' value='".$row['id_autor_tytul']."' name='id_del'>
             <input type='submit' value='Delet'>
             </form>
@@ -92,7 +92,7 @@
         
         
             <td>
-                <form action='/admin/delet_wyp.php' method='POST'>
+                <form action='/autor/delet_wyp_autor.php' method='POST'>
                 <input type='hidden' name='oddaj' value='".$row['id_wypozyczenia']."'>
                 <input type='submit' value='oddaj'>
                 </form>
@@ -108,7 +108,7 @@
 
 </div>
     <div class="right">
-        <div><h2>Admin Panel</h2></div>
+        <div><h2>Autor Panel</h2></div>
         <form action="/admin/insert_autorzy.php" method="POST">
             <h3>Dodaj Książke</h3>
             <input type="text" name="name" placeholder="Nazwisko"><br>
@@ -117,13 +117,8 @@
         </form>
 
         
-        <form action="/log/dodaj_user.php" method="POST">
-            <h3>Dodaj Użytkownika</h3>
-            <input type="text" name="oddaj"  placeholder="User"><br>
-            <input type="submit" value="Dodaj">
-        </form>
 
-        <form action="/log/wyp.php" method="POST">
+        <form action="/autor/wyp_autor.php" method="POST">
         <h3>Wypożycz książke</h3>
         <p>wybierz książkę:</p>
         <?php

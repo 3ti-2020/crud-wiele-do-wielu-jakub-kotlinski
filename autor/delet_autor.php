@@ -8,5 +8,5 @@
     $sql = "DELETE FROM lib_autor_tytul WHERE id_autor_tytul=$del";
     mysqli_query($conn, $sql);
 
-    header('Location: /admin/index2.php');
+    header('Location: /autor/index3.php');
 ?>

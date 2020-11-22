@@ -41,22 +41,24 @@
     $conn = new mysqli("remotemysql.com","jfFxpXyGWk","Dly0LzRmEd","jfFxpXyGWk");
 
 
-    $sql = "SELECT `name`, tytul FROM lib_tytul, lib_autor_tytul, lib_autor WHERE lib_autor_tytul.id_autor=lib_autor.id AND lib_autor_tytul.id_tytul=lib_tytul.id_tytul";
+    $sql = "SELECT username, userpass, uprawnienie FROM `users`, uprawnienia WHERE uprawnienia.id=users.id_uprawnienia";
 
     $result = $conn->query( $sql );
     echo("<div>");
-    echo("<h2>Biblioteka</h2>");
+    echo("<h2>User</h2>");
     echo("<table border=1>");
     echo("<tr>
-    <td>name</td>
-    <td>tytul</td>
+    <td>Username</td>
+    <td>Userpass</td>
+    <td>Uprawnienie</td>
     </tr>");
 
     while( $row = $result->fetch_assoc())
     {
         echo("<tr>
-        <td>".$row['name']."</td>
-        <td>".$row['tytul']."</td>");
+        <td>".$row['username']."</td>
+        <td>".$row['userpass']."</td>
+        <td>".$row['uprawnienie']."</td>");
     }
 
     echo("</table>");
@@ -71,7 +73,6 @@
             <input type="text" name="login" placeholder="Login..." required><br>
             <input type="password" name="password" placeholder="Hasło..." required><br>
             <input type="submit" value="Zaloguj"><br>
-            <span class="password">admin a</span>
     
     </form>
 
