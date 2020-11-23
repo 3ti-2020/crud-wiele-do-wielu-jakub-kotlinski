@@ -109,7 +109,7 @@
 </div>
     <div class="right">
         <div><h2>Autor Panel</h2></div>
-        <form action="/admin/insert_autorzy.php" method="POST">
+        <form action="/autor/insert_autor.php" method="POST">
             <h3>Dodaj Książke</h3>
             <input type="text" name="name" placeholder="Nazwisko"><br>
             <input type="text" name="tytul" placeholder="Tytuł"><br>
