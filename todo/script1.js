@@ -28,11 +28,6 @@ function addTask(text) {
     //wrzucam do elementu
     element.append(elementInner);
 
-    //tworzę datę
-    const date = new Date();
-    const dateText = `${date.getDate()} - ${date.getMonth()+1} - ${date.getFullYear()} godz.: ${date.getHours()}:${date.getMinutes()}`;
-    element.querySelector(".element-date").innerText = dateText;
-
     //wstawiam tekst
     element.querySelector(".element-text").innerText = text;
 
