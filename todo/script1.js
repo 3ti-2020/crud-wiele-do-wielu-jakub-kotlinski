@@ -39,3 +39,9 @@ function addTask(text) {
     //i wrzucam element do listy
     todoList.append(element);
 }
+
+todoList.addEventListener("click", e => {
+    if (e.target.classList.contains("element-delete")) {
+        e.target.closest(".element").remove();
+    }
+});

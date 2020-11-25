@@ -47,18 +47,6 @@
     font-size: 0.9rem;
     font-weight: normal;
 }
-.element-delete {
-    border:0;
-    background: url(images/trash.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    text-indent: -999px;
-    overflow: hidden;
-}
 .element-text {
     color:#777;
     font-size:0.8rem;
