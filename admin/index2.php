@@ -20,7 +20,6 @@
         <div class="b">
             <h1>Jakub Kotliński</h1>
             <div class="linki">
-                <a href="/card/index.html"><div class="link">Karty</div></a>
                 <a href="/log/logout.php"><div class="link">Wyloguj</div></a>
             </div>
         </div>

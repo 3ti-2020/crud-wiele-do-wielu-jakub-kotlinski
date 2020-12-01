@@ -20,6 +20,9 @@
         <div class="b">
             <h1>Jakub Kotliński</h1>
             <div class="linki">
+                <a href="/card/index.html"><div class="link">Karty</div></a>
+                <a href="/egzamin/index.html"><div class="link">Egzamin</div></a>
+                <a href="/todo/index.html"><div class="link">Lista ToDo</div></a>
             </div>
         </div>
         <div class="c">

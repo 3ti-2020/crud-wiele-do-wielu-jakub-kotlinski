@@ -20,7 +20,6 @@
         <div class="b">
             <h1>Jakub Kotliński</h1>
             <div class="linki">
-                <a href="/card/index.html"><div class="link">Karty</div></a>
                 <a href="/log/logout.php"><div class="link">Wyloguj</div></a>
             </div>
         </div>
@@ -109,7 +108,7 @@
 </div>
     <div class="right">
         <div><h2>Autor Panel</h2></div>
-        <form action="/autor/insert_autor.php" method="POST">
+        <form action="/admin/insert_autorzy.php" method="POST">
             <h3>Dodaj Książke</h3>
             <input type="text" name="name" placeholder="Nazwisko"><br>
             <input type="text" name="tytul" placeholder="Tytuł"><br>
